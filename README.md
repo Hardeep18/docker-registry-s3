@@ -18,7 +18,7 @@ Place the AWS Credentials value
 <AWS S3 bucket nmae>
 ```
 
-## Set up for docker registry ##
+## Set's to configure docker registry on local server##
 
 
 ```
