@@ -22,7 +22,7 @@ Place the AWS Credentials value
 
 
 ```
-docker run --entrypoint htpasswd registry:2 -Bbn admin admin@123 > auth/htpasswd
+docker run --entrypoint htpasswd httpd:2 -Bbn admin admin@123 > auth/htpasswd
 ```
 
 ```
