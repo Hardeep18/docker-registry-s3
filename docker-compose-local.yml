@@ -1,0 +1,17 @@
+version: "3"
+services: 
+    registry:
+        environment:
+            REGISTRY_AUTH: htpasswd
+            REGISTRY_AUTH_HTPASSWD_PATH: /auth/htpasswd
+            REGISTRY_AUTH_HTPASSWD_REALM: Registry Realm
+            REGISTRY_STORAGE_CACHE_BLOBDESCRIPTOR: inmemory
+            REGISTRY_STORAGE_DELETE_ENABLED: "true"
+        image: registry:2
+        restart: always
+        ports:
+            - 9099:5000
+        volumes:
+            - ./auth:/auth
+            - /mnt/registry:/var/lib/registry
+        container_name: registry
